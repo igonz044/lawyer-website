@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Basic Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #5A2311;
+}
+
+a {
+    text-decoration: none;
+    color: #A37137;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #BC9C22;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    color: #5A2311;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-size: 16px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-top: 3px solid #A37137;
+}
+
+.dropdown-content a {
+    color: #5A2311;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f5f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: overlay;
+    background-color: rgba(90, 35, 17, 0.5);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #A37137;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #BC9C22;
+}
+
+/* About Page Specifics */
+.values {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f5f1;
+}
+
+.values h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #5A2311;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.value-item h3 {
+    font-size: 24px;
+    color: #A37137;
+    margin-bottom: 15px;
+}
+
+/* Practice Areas Page Specifics */
+.practice-areas-header {
+    background-color: #83755C;
+    color: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.practice-areas-header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.practice-area-detail {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.practice-area-detail:last-child {
+    border-bottom: none;
+}
+
+.practice-area-detail h2 {
+    color: #A37137;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Contact Page Specifics */
+.trust-indicators {
+    padding: 60px 20px;
+    background-color: #f8f5f1;
+    text-align: center;
+}
+
+.trust-indicators h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #5A2311;
+}
+
+.indicator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.indicator-item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.indicator-item h3 {
+    font-size: 24px;
+    color: #A37137;
+    margin-bottom: 15px;
+}
+
+/* Accordion Section */
+.accordion-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.accordion-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #5A2311;
+}
+
+.accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-btn {
+    background-color: #f8f5f1;
+    color: #5A2311;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'Lato', sans-serif;
+}
+
+.accordion-btn:hover, .accordion-btn.active {
+    background-color: #eaddd0;
+}
+
+.accordion-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-panel p {
+    padding: 15px 0;
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* About and Practice Areas Sections */
+.about,
+.practice-areas {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2,
+.practice-areas h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #5A2311;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.practice-areas ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.practice-areas li {
+    margin: 10px;
+}
+
+.practice-areas a {
+    background-color: #FFFFFF;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #5A2311;
+    border: 1px solid #e0e0e0;
+}
+
+.practice-areas a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #5A2311;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media a {
+    margin-left: 15px;
+}
+
+.social-media img {
+    transition: opacity 0.3s ease;
+}
+
+.social-media img:hover {
+    opacity: 0.8;
+} 
