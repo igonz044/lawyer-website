@@ -91,7 +91,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-    background-image: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-image: url("landingpage.jpg");
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
@@ -163,34 +163,102 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
-/* Practice Areas Page Specifics */
-.practice-areas-header {
-    background-color: #83755C;
-    color: #FFFFFF;
-    padding: 60px 20px;
+/* Practice Areas Section */
+.practice-areas {
+    padding: 50px 20px;
     text-align: center;
 }
 
-.practice-areas-header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+.practice-areas h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #5A2311;
 }
 
-.practice-area-detail {
-    padding: 60px 20px;
-    max-width: 900px;
+.practice-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid #e0e0e0;
 }
 
-.practice-area-detail:last-child {
-    border-bottom: none;
+.practice-area-card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: flex-end;
 }
 
-.practice-area-detail h2 {
-    color: #A37137;
-    font-size: 32px;
-    margin-bottom: 20px;
+.practice-area-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.practice-area-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    width: 100%;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+    color: #FFFFFF;
+}
+
+.card-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    color: #FFFFFF;
+    opacity: 0.95;
+}
+
+/* EB-5 Card */
+.eb5-card {
+    background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* E-2 Card */
+.e2-card {
+    background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* L-1 Card */
+.l1-card {
+    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* O-1 Card */
+.o1-card {
+    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Contact Page Specifics */
@@ -279,14 +347,12 @@ nav ul li a {
 }
 
 /* About and Practice Areas Sections */
-.about,
-.practice-areas {
+.about {
     padding: 50px 20px;
     text-align: center;
 }
 
-.about h2,
-.practice-areas h2 {
+.about h2 {
     font-size: 36px;
     margin-bottom: 20px;
     color: #5A2311;
@@ -297,33 +363,6 @@ nav ul li a {
     line-height: 1.5;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.practice-areas ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.practice-areas li {
-    margin: 10px;
-}
-
-.practice-areas a {
-    background-color: #FFFFFF;
-    padding: 20px 30px;
-    border-radius: 5px;
-    font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    color: #5A2311;
-    border: 1px solid #e0e0e0;
-}
-
-.practice-areas a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section */
@@ -394,4 +433,115 @@ footer {
 
 .social-media img:hover {
     opacity: 0.8;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #5A2311;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Practice Area Pages */
+.practice-area-header {
+    background-color: #83755C;
+    color: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.practice-area-header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.practice-area-header p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.practice-area-content {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.practice-area-content h2 {
+    color: #A37137;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.practice-area-content h2:first-child {
+    margin-top: 0;
+}
+
+.practice-area-content ul {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.practice-area-content li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.practice-area-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.case-study {
+    background-color: #f8f5f1;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    border-left: 4px solid #A37137;
+}
+
+.case-study p {
+    margin-bottom: 15px;
+}
+
+.case-study p:last-child {
+    margin-bottom: 0;
+}
+
+.practice-img-wrapper {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.practice-img-small {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.practice-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 } 
