@@ -33,12 +33,14 @@ header {
     background-color: #FFFFFF;
     padding: 20px;
     border-bottom: 1px solid #e0e0e0;
+    position: relative;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo a {
@@ -79,10 +81,11 @@ nav ul li a {
     text-decoration: none;
     display: block;
     text-align: left;
+    transition: background-color 0.5s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #f8f5f1;
+    background-color: #eaddd0;
 }
 
 .dropdown:hover .dropdown-content {
@@ -139,11 +142,13 @@ nav ul li a {
     border-radius: 5px;
     font-size: 18px;
     border: none;
-    transition: background-color 0.3s ease;
+    border-color: #5A2311;
+    transition: background-color 0.5s ease;
 }
 
 .btn:hover {
-    background-color: #BC9C22;
+    background-color: #7e572b;
+    color: #FFFFFF;
 }
 
 /* About Page Specifics */
@@ -438,14 +443,19 @@ footer {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: nowrap;
 }
 
 .social-media a {
     margin-left: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .social-media img {
     transition: opacity 0.3s ease;
+    width: 29px;
+    height: 29px;
 }
 
 .social-media img:hover {
@@ -561,4 +571,226 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #5A2311;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+    
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #f8f5f1;
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        opacity: 0;
+        border-top: none;
+        min-width: auto;
+    }
+    
+    .dropdown.active .dropdown-content {
+        max-height: 300px;
+        opacity: 1;
+    }
+    
+    .dropdown-content a {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 60px 20px;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .hero-image img {
+        max-width: 80%;
+    }
+    
+    /* General Text Sizes */
+    h1 {
+        font-size: 32px !important;
+    }
+    
+    h2 {
+        font-size: 28px !important;
+    }
+    
+    h3 {
+        font-size: 24px !important;
+    }
+    
+    p {
+        font-size: 16px !important;
+    }
+    
+    /* Practice Areas */
+    .practice-areas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .practice-area-card {
+        height: 200px;
+    }
+    
+    /* Trust Indicators */
+    .indicator-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .footer-content p {
+        font-size: 10px !important;
+    }
+    
+    .social-media img {
+        width: 29px;
+        height: 29px;
+    }
+    
+    /* Practice Area Pages */
+    .practice-area-header h1 {
+        font-size: 36px;
+    }
+    
+    .practice-area-content h2 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Even smaller screens */
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    .hero {
+        padding: 40px 15px;
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+    }
+    
+    /* General spacing */
+    .about, .practice-areas, .trust-indicators, .accordion-section {
+        padding: 30px 15px;
+    }
+    
+    .values {
+        padding: 30px 15px;
+    }
+    
+    .practice-area-content {
+        padding: 40px 15px;
+    }
+    
+    .practice-area-header {
+        padding: 40px 15px;
+    }
 } 
