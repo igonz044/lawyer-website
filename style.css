@@ -91,28 +91,45 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-    background-image: url("landingpage.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #FFFFFF;
-    padding: 100px 20px;
-    text-align: center;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    color: #5A2311;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-blend-mode: overlay;
-    background-color: rgba(90, 35, 17, 0.5);
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #5A2311;
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: #5A2311;
 }
 
 .btn {
