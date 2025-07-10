@@ -10,19 +10,19 @@ body {
 
 /* Phone Bar */
 .phone-bar {
-    background-color: #5A2311;
+    background-color: #45261c;
     color: #FFFFFF;
     text-align: left;
-    padding: 4px 20px;
+    padding: 0px 20px 2px 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .phone-bar a {
-    color: #FFFFFF;
+    color: #fff2ca;
     
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 400;
+    font-size:12px;
     transition: opacity 0.5s ease;
     transition: text-decoration 0.5s ease;
     padding-left: 4px;
@@ -55,7 +55,7 @@ ul {
 
 /* Header */
 header {
-    background-color: #FFFFFF;
+    
     padding: 20px;
     position: relative;
 }
@@ -66,11 +66,13 @@ nav {
     align-items: flex-start;
     position: relative;
     margin-right: 25px;
+    
 }
 
 .logo a img {
     margin-left: 25px;
-    width: 180px;
+    width: 120px;
+    height: 60px;
 }
 
 nav ul li {
@@ -83,18 +85,22 @@ nav ul li a {
     font-size: 16px;
 }
 
-.phone-number a {
+.phone-button{
+    border: none;
     background-color: #A37137;
-    color: #FFFFFF !important;
+    
     padding: 8px 16px;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 400;
     transition: background-color 0.5s ease;
 }
+.phone-button a {
+    color: #FFFFFF;
+}
 
-.phone-number a:hover {
+.phone-button:hover {
     background-color: #7e572b;
-    color: #FFFFFF !important;
+    cursor: pointer;
 }
 
 /* Dropdown Menu */
@@ -135,32 +141,59 @@ nav ul li a {
 }
 /* Hero Section */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px;
+    flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 60px 20px;
+        background: linear-gradient(217deg, rgba(129, 66, 66, 0.8), rgb(255 0 0 / 0) 70.71%),
+        linear-gradient(127deg, rgba(209, 192, 94, 0.8), rgb(0 255 0 / 0) 70.71%),
+        linear-gradient(336deg, rgba(249, 249, 250, 0.8), rgb(0 0 255 / 0) 70.71%);
 }
+
 
 .hero-content {
-    flex: 1;
-    text-align: left;
-    color: #5A2311;
-    margin-top: -100px;
+    text-align: center;
+    margin-top: 0px;
 }
 
-.hero-image {
+.hero-services {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.hero-services li {
+    color: #5A2311;
+    font-size: 18px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.licontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.hero-services li::before {
+    content: "•";
+    color: #A37137;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* .hero-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .hero-image img {
     max-width: 100%;
-    height: auto;
+    height: 450px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -174,7 +207,6 @@ nav ul li a {
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 80px;
     color: #5A2311;
 }
 
@@ -187,7 +219,6 @@ nav ul li a {
     border: none;
     border-color: #5A2311;
     transition: background-color 0.5s ease;
-    margin-top: 80px;
 }
 
 /* Specific spacing for hero button after paragraph */
@@ -199,7 +230,24 @@ nav ul li a {
     background-color: #7e572b;
     color: #FFFFFF;
 }
+.about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
 
+.about-img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-left: 120px;
+}
+
+.about-text {
+    flex: 1;
+}
 /* About Page Specifics */
 .values {
     padding: 50px 20px;
@@ -417,25 +465,6 @@ nav ul li a {
     text-align: left;
 }
 
-/* About and Practice Areas Sections */
-.about {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #5A2311;
-}
-
-.about p {
-    font-size: 18px;
-    line-height: 1.5;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 /* Contact Section */
 .contact {
     padding: 50px 20px;
@@ -513,12 +542,18 @@ footer {
 
 /* About Section */
 .about {
-    padding: 50px 20px;
-    text-align: center;
+    align-items: center;
+    background-color: hsl(60, 100%, 98%);
+    padding: 60px 100px;
+}
+
+.about-text {
+    align-items: left;
+    padding: 0px 30px;
 }
 
 .about h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #5A2311;
 }
@@ -526,8 +561,6 @@ footer {
 .about p {
     font-size: 18px;
     line-height: 1.5;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 /* Practice Area Pages */
@@ -723,7 +756,7 @@ footer {
     font-size: 1.1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .map-flex {
         flex-direction: column;
         min-height: unset;
@@ -747,6 +780,29 @@ footer {
     .map-hours, .map-phone {
         font-size: 1rem;
         margin-bottom: 18px;
+    }
+    .about {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    .about-img {
+        width: 100%;
+        max-width: 280px;
+        margin-left: 0;
+    }
+    .about-text {
+        padding: 0;
+        text-align: center;
+    }
+    .about h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .about p {
+        font-size: 16px;
+        text-align: center;
     }
 }
 
@@ -875,10 +931,7 @@ footer {
         max-width: 80%;
     }
     
-    /* Logo adjustments for mobile */
-    .logo a img {
-        width: 140px !important;
-    }
+    
     
     /* General Text Sizes */
     main {
@@ -971,17 +1024,6 @@ footer {
     /* Even smaller screens */
     .logo a img {
         margin-left: 25px;
-        width: 140px;
-    }
-
-    
-}
-
-@media screen and (max-width: 480px) {
-    /* Even smaller screens */
-    .logo a img {
-        margin-left: 25px;
-        width: 140px;
     }
 
     .hero h1 {
@@ -1010,6 +1052,7 @@ footer {
         max-width: 100%;
     }
     
+   
     /* General spacing */
     .about, .practice-areas, .trust-indicators, .accordion-section {
         padding: 30px 15px;
@@ -1027,3 +1070,8 @@ footer {
         padding: 40px 15px;
     }
 } 
+@media (max-width: 700px) {
+    
+    
+}
+
